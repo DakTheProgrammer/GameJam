@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCollision : MonoBehaviour
 {
     private Movment move;
+    public GameObject GameOverUI;
 
     private void Start()
     {
@@ -15,6 +16,7 @@ public class PlayerCollision : MonoBehaviour
         if(collisionInfo.collider.tag != "Floor")
         {
             move.enabled = false;
+            GameOverUI.SetActive(true);
         }
     }
 }
