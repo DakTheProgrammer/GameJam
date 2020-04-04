@@ -433,7 +433,7 @@ GameObject:
   - component: {fileID: 1661518868}
   - component: {fileID: 1661518867}
   m_Layer: 0
-  m_Name: JumpCube
+  m_Name: JumpCube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -526,7 +526,7 @@ GameObject:
   - component: {fileID: 1749094726}
   - component: {fileID: 1749094725}
   m_Layer: 0
-  m_Name: DodgeCube
+  m_Name: DodgeCube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
