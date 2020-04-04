@@ -21,6 +21,6 @@ public class GetEndScore : MonoBehaviour
     void Update()
     {
         num = play.position.x + 99;
-        scoreText.text = "Game Over\nFinal Score: " + num.ToString("0");
+        scoreText.text = "Game Over\nFinal Score: " + num.ToString("0") + "\n\nCreated By:\nDakota Wilson\n& Sarah Gilliland";
     }
 }
