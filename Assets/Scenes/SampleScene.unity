@@ -2887,6 +2887,7 @@ GameObject:
   - component: {fileID: 2090919804}
   - component: {fileID: 2090919809}
   - component: {fileID: 2090919808}
+  - component: {fileID: 2090919810}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2996,6 +2997,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &2090919810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2090919803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00629d9339b69894eb29afc02fcdd51c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &362432807324762776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3353,6 +3366,11 @@ PrefabInstance:
     - target: {fileID: 6904343466811409817, guid: c74fd88b7e250854cba905c360b72dba,
         type: 3}
       propertyPath: m_Name
+      value: Floor
+      objectReference: {fileID: 0}
+    - target: {fileID: 6904343466811409817, guid: c74fd88b7e250854cba905c360b72dba,
+        type: 3}
+      propertyPath: m_TagString
       value: Floor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
