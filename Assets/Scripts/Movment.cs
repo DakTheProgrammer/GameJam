@@ -5,7 +5,7 @@ using UnityEngine;
 public class Movment : MonoBehaviour
 {
     private Rigidbody Player;
-    public static float Speed = 300f;
+    public static float Speed = 150f;
     private float SideForce = 1100f;
     private float JumpForce = 15000f;
 
@@ -22,7 +22,6 @@ public class Movment : MonoBehaviour
         {
             Player.AddForce(0, -1000f * Time.deltaTime, 0);
         }
-        Player.mass = 1;
         Player.AddForce(Speed * Time.deltaTime, 0, 0); 
         if(Input.GetKey("a"))
         {
