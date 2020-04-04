@@ -5,9 +5,9 @@ using UnityEngine;
 public class Movment : MonoBehaviour
 {
     private Rigidbody Player;
-    public static float Speed = 400f;
-    private float SideForce = 1000f;
-    private float JumpForce = 10000f;
+    public static float Speed = 300f;
+    private float SideForce = 1100f;
+    private float JumpForce = 15000f;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +18,11 @@ public class Movment : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if(Player.position.y > 1)
+        {
+            Player.AddForce(0, -1000f * Time.deltaTime, 0);
+        }
+        Player.mass = 1;
         Player.AddForce(Speed * Time.deltaTime, 0, 0); 
         if(Input.GetKey("a"))
         {
