@@ -22,6 +22,7 @@ public class PlayerCollision : MonoBehaviour
             rb.AddForce(0, -100, 0);
             rb.AddForce(0, -100, 0);
             rb.AddForce(0, -100, 0);
+            rb.mass = 1000;
 
         }
     }
