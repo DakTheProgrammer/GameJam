@@ -6,7 +6,7 @@ using UnityEngine;
 public class Movment : MonoBehaviour
 {
     private Rigidbody Player;
-    public static float Speed = 100f;
+    public static float Speed = 200f;
     private float SideForce = 1100f;
     private float JumpForce = 15000f;
 
@@ -23,7 +23,7 @@ public class Movment : MonoBehaviour
         {
             Player.AddForce(0, -1000f * Time.deltaTime, 0);
         }
-        if (Convert.ToInt32(Player.position.x) % 3 == 0)
+        if (Convert.ToInt32(Player.position.x) % 4 == 0)
         {
             Player.AddForce(Speed * Time.deltaTime, 0, 0);
         }
@@ -39,7 +39,7 @@ public class Movment : MonoBehaviour
         {
             Player.AddForce(0, 0, -SideForce * Time.deltaTime);
         }
-        if (Input.GetKey("space") && Player.position.y == 1)
+        if (Input.GetKey("space") && Player.position.y <= 1)
         {
             Player.AddForce(100, JumpForce * Time.deltaTime, 0);
         }
