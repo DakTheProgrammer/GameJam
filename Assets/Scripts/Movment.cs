@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Movment : MonoBehaviour
 {
     private Rigidbody Player;
-    public static float Speed = 150f;
+    public static float Speed = 100f;
     private float SideForce = 1100f;
     private float JumpForce = 15000f;
 
@@ -22,8 +23,15 @@ public class Movment : MonoBehaviour
         {
             Player.AddForce(0, -1000f * Time.deltaTime, 0);
         }
-        Player.AddForce(Speed * Time.deltaTime, 0, 0); 
-        if(Input.GetKey("a"))
+        if (Convert.ToInt32(Player.position.x) % 3 == 0)
+        {
+            Player.AddForce(Speed * Time.deltaTime, 0, 0);
+        }
+        if (Player.position.x == -99)
+        {
+            Player.AddForce(10000 * Time.deltaTime, 0, 0);
+        }
+        if (Input.GetKey("a"))
         {
             Player.AddForce(0, 0, SideForce * Time.deltaTime);
         }
@@ -33,7 +41,7 @@ public class Movment : MonoBehaviour
         }
         if (Input.GetKey("space") && Player.position.y == 1)
         {
-            Player.AddForce(0, JumpForce * Time.deltaTime, 0);
+            Player.AddForce(100, JumpForce * Time.deltaTime, 0);
         }
     }
 }

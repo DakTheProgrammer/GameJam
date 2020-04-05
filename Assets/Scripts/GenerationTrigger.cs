@@ -26,6 +26,6 @@ public class GenerationTrigger : MonoBehaviour
     private void OnTriggerEnter()
     {
         Instantiate(Part[Random.Range(0,Part.Count)], MoveMe.position, Quaternion.identity);
-        MoveMe.position = new Vector3 (MoveMe.position.x + 200,0,0);
+        MoveMe.position = new Vector3 (MoveMe.position.x + 200,-0.001f,0);
     }
 }
